@@ -171,6 +171,19 @@
       return false; // fixme
     },
 
+    hasAnyRookConflicts : function(){
+      if(this.hasAnyRowConflicts() || this.hasAnyColConflicts()) {
+        return true;
+      }
+      return false;
+    },
+
+    hasAnyQueenConflicts : function(){
+      if(this.hasAnyRowConflicts() || this.hasAnyColConflicts() || this.hasAnyMinorDiagonalConflicts() || this.hasAnyMajorDiagonalConflicts()) {
+        return true;
+      }
+      return false;
+    },
 
 
     // Minor Diagonals - go from top-right to bottom-left
